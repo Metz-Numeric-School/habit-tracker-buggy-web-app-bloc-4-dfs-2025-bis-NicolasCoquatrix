@@ -12,9 +12,14 @@
 
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
-            <?php if (isset($error)): ?>
+            <!-- Correction : La nouvel utilisateur reçoit un tableau $errors par une variable $error -->
+            <?php if (!empty($errors)): ?>
                 <div class="alert alert-danger" role="alert">
-                    <?= $error ?>
+                    <ul>
+                        <?php foreach ($errors as $err): ?>
+                            <li><?= htmlspecialchars($err) ?></li>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
             <?php endif; ?>
 

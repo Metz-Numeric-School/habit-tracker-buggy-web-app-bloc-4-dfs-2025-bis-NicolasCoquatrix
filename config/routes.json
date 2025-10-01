@@ -65,6 +65,6 @@
         "path": "/api/habits",
         "controller": "App\\Controller\\Api\\HabitsController",
         "action": "index",
-        "guard": "App\\Guard\\UserGuard"
+        "guard": "App\\Guard\\AdminGuard"
     }
 ]
