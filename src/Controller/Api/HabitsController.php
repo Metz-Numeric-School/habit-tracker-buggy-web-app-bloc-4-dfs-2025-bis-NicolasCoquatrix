@@ -5,7 +5,8 @@ namespace App\Controller\Api;
 use App\Repository\HabitRepository;
 use Mns\Buggy\Core\AbstractController;
 
-class HabitController extends AbstractController
+// Correction : Erreur sur le nom de la classe (HabitController au lieu de HabitsController)
+class HabitsController extends AbstractController
 {
     private HabitRepository $habitRepository;
 
