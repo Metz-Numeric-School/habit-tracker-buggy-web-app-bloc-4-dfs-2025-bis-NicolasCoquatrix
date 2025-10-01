@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.5] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Correction de la redirection au dashboard user dans RegisterController
+
 ## [0.2.4] - 2025-10-01
 
 ### 🐛 Bug Fixes
