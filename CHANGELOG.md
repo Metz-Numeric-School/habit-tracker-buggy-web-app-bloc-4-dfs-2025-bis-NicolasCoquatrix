@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.17] - 2025-10-01
+
+### 📚 Documentation
+
+- Procédure de déploiement
+
 ## [0.2.16] - 2025-10-01
 
 ### 🐛 Bug Fixes
