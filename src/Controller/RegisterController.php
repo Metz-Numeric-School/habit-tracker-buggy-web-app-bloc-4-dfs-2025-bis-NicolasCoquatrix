@@ -60,7 +60,8 @@ class RegisterController extends AbstractController
                 $_SESSION['admin'] = 0;
 
                 // On redirige vers son dashboard
-                header("Location: /user/ticket");
+                // Correction : La route /user/ticket n'existe pas, je l'ai remplacé par /dashboard
+                header("Location: /dashboard");
                 exit;
             }
         }
