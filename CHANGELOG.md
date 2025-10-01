@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.10] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Ajout de la route /habit/toggle
+
 ## [0.2.9] - 2025-10-01
 
 ### 🐛 Bug Fixes
