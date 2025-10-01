@@ -4,5 +4,3 @@ parameters:
         - public
         - src
         - templates
-    ignoreErrors:
-        - '#Variable \$[a-zA-Z0-9_]+ might not be defined#'
