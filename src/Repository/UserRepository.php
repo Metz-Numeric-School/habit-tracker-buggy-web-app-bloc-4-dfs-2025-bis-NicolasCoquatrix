@@ -35,6 +35,11 @@ class UserRepository extends AbstractRepository
 
     public function insert(array $data = array())
     {
+        // Evite la création d'un utilisateur avec un email déjà existant
+        if ($this->findByEmail($data['email'])) {
+            return null;
+        }
+
         $sql = "INSERT INTO mns_user (lastname, firstname, email, password, isadmin) VALUES (:lastname, :firstname, :email, :password, :isadmin)";
         $query = $this->getConnection()->prepare($sql);
         $query->execute($data);

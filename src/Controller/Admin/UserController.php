@@ -52,6 +52,15 @@ class UserController extends AbstractController
                 $user['password'] = password_hash($user['password'], PASSWORD_DEFAULT);
 
                 $id = $this->userRepository->insert($user);
+                
+                // Correction : Si adresse mail existante
+                if(!$id) {
+                    $errors['email'] = 'Un utilisateur existe déjà avec cet email.';
+                    return $this->render('admin/user/new.html.php', [
+                        'errors' => $errors,
+                    ]);
+                }
+
                 header('Location: /admin/user');
                 exit;
             }

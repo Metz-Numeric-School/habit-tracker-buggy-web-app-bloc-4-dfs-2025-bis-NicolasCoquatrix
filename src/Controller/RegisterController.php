@@ -51,6 +51,15 @@ class RegisterController extends AbstractController
                 // On persite les informations en BDD
                 $id = $this->userRepository->insert($user);
 
+                // Correction : Si adresse mail existante
+                if(!$id) {
+                    $errors['email'] = 'Un utilisateur existe déjà avec cet email.';
+                    return $this->render('register/index.html.php', [
+                        'title' => 'Inscription',
+                        'errors' => $errors
+                    ]);
+                }
+
                 // On authentifie l'utilsateur directement
                 $_SESSION['user'] = [
                     'id' => $id,
