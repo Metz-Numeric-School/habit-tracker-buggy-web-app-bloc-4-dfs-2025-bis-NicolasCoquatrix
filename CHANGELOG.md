@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.14] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Hashage et mot de passe fort dans la page /admin/user/new
+
 ## [0.2.13] - 2025-10-01
 
 ### 🐛 Bug Fixes
