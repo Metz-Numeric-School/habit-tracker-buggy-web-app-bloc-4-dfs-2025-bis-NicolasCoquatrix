@@ -12,5 +12,8 @@
             "App\\": "src/",
             "Mns\\Buggy\\Core\\": "core/"
         }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1"
     }
 }
