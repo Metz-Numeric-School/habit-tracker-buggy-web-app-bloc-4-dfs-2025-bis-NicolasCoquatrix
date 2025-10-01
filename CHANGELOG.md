@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.3] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Correction de la redirection au dashboard user dans SecurityController
+
 ## [0.2.2] - 2025-10-01
 
 ### 🐛 Bug Fixes
