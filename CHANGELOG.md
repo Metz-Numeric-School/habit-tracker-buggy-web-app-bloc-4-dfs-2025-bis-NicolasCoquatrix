@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.19] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Correction des failles XSS
+
 ## [0.2.18] - 2025-10-01
 
 ### 📚 Documentation
