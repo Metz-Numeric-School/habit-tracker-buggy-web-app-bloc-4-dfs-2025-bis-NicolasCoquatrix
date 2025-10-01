@@ -5,7 +5,7 @@
 
 USE habit_tracker;
 
--- Insert demo user (id fixe pour cohérence) (mot de passe : demo1234)
+-- Insert demo user (id fixe pour cohérence) (mot de passe : demo1234!)
 INSERT INTO mns_user (id, firstname, lastname, email, password, isadmin, created_at)
 VALUES (1000, 'Demo', 'User', 'demo@local.lab', '$2y$10$6VZGwSKCI3qDF7jlWUKnxeLn3piFDCxtM2zRsR4k7hL8eiYplWJZW', 0, NOW());
 

@@ -20,11 +20,11 @@ CREATE TABLE IF NOT EXISTS mns_user (
   UNIQUE KEY email (email)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Ajout d'un utilisateur admin (mot de passe : azertyuiop)
+-- Ajout d'un utilisateur admin (mot de passe : azertyuiop!)
 INSERT INTO mns_user (firstname, lastname, email, password, isadmin) VALUES
 ('Admin', 'HT', 'admin@ht-buggy-wapp.fr', '$2y$10$smhS8czT2f./QJjrZFM.u.BWV96nTw2o6Y3GS81kkNOCjF2EmSEgq', 1);
 
--- Ajout d'un utilisateur standard (mot de passe : azertyuiop)
+-- Ajout d'un utilisateur standard (mot de passe : azertyuiop!)
 INSERT INTO mns_user (firstname, lastname, email, password, isadmin) VALUES
 ('User', 'HT', 'user@ht-buggy-wapp.fr', '$2y$10$V.XQAjfzGxS.ceIet/pSb.izrS48N.ZPQFOVs8tB3BGff8781Duxi', 0);
 
