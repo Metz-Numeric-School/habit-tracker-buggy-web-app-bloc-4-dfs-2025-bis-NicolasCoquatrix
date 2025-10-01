@@ -29,8 +29,8 @@ class HabitRepository extends AbstractRepository
         $sql = "SELECT * FROM habits WHERE user_id = :userId";
         $query = $this->getConnection()->prepare($sql);
         $query->execute(['userId' => $userId]);
-        $data = $query->fetch();
-        return $data ? EntityMapper::mapCollection(Habit::class, $data): null;
+        $data = $query->fetchAll();
+        return EntityMapper::mapCollection(Habit::class, $data);
     }
 
      /**
