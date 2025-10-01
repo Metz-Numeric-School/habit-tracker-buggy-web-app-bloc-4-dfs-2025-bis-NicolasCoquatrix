@@ -34,10 +34,19 @@ class RegisterController extends AbstractController
             if(empty($user['password']))
                 $errors['password'] = 'Le mot de passe est obligatoire';
 
+            if(empty($user['password'])) {
+                $errors['password'] = 'Le mot de passe est obligatoire';
+                // Correction : Mot de passe fort obligatoire
+            } elseif(!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'",.<>\/?]).{8,}$/', $user['password'])) {
+                $errors['password'] = 'Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un caractère spécial autorisé (!@#$%^&*()_+-=[]{},.;:\'"<>?/).';
+            }
 
             if(count($errors) == 0) {
                 // Par défaut l'utilisateur n'est pas admin
                 $user['isadmin'] = 0;
+
+                // Correction : Il faut hasher le mot de passe
+                $user['password'] = password_hash($user['password'], PASSWORD_DEFAULT);
 
                 // On persite les informations en BDD
                 $id = $this->userRepository->insert($user);
