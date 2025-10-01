@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.18] - 2025-10-01
+
+### 📚 Documentation
+
+- Réponses aux questions
+
 ## [0.2.17] - 2025-10-01
 
 ### 📚 Documentation
