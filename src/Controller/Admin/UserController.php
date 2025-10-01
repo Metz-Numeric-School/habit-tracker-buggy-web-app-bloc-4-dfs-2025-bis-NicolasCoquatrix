@@ -40,9 +40,9 @@ class UserController extends AbstractController
             if(empty($user['email']))
                 $errors['email'] = 'L\'email est obligatoire';
 
-            if(empty($user['password']))
+            if(empty($user['password'])) {
                 $errors['password'] = 'Le mot de passe est obligatoire';
-                // Correction : Mot de passe fort obligatoire
+            // Correction : Mot de passe fort obligatoire
             } elseif(!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};:\'",.<>\/?]).{8,}$/', $user['password'])) {
                 $errors['password'] = 'Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un caractère spécial autorisé (!@#$%^&*()_+-=[]{},.;:\'"<>?/).';
             }
@@ -50,7 +50,7 @@ class UserController extends AbstractController
             if(count($errors) == 0)
             {
                 $user['password'] = password_hash($user['password'], PASSWORD_DEFAULT);
-                
+
                 $id = $this->userRepository->insert($user);
                 header('Location: /admin/user');
                 exit;
