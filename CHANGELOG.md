@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.11] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Correction du nom de la classe HabitsController dans Api
+
 ## [0.2.10] - 2025-10-01
 
 ### 🐛 Bug Fixes
