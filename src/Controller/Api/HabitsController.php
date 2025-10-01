@@ -15,11 +15,16 @@ class HabitsController extends AbstractController
         $this->habitRepository = new HabitRepository();
     }
 
+    // Correction : Renvoi des données
     public function index()
     {
         $habits = $this->habitRepository->findAll();
         $habitsArray = array_map(function($habit) {
-            return get_object_vars($habit);
+            return [
+                'id' => $habit->getId(),
+                'name' => $habit->getName(),
+                'description' => $habit->getDescription(),
+            ];
         }, $habits);
 
         return $this->json([
