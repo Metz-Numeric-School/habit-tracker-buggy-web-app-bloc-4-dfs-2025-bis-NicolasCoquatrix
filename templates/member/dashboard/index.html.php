@@ -1,7 +1,8 @@
 <?php $layout = 'base.html.php'; ?>
 
 <div class="container py-5">
-    <h1 class="mb-4">Bonjour <?= $_SESSION['user']['firstname'] ?> !</h1>
+    <!--- CORRECTION : Le site stock $_SESSION['user']['username'] et non $_SESSION['user']['firstname'] -->
+    <h1 class="mb-4">Bonjour <?= $_SESSION['user']['username'] ?>
 
     <div class="row mb-4">
         <!-- Statistiques rapides -->
