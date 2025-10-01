@@ -19,7 +19,8 @@ class SecurityController extends AbstractController
 
         if(!empty($_SESSION['user']))
         {
-            $_SESSION['admin'] ? header('Location: /admin/dashboard') : header('Location: /user/dashboard'); die;
+            // Correction : la route /user/dashboard n'existe pas et je l'ai remplacé en /dashboard
+            $_SESSION['admin'] ? header('Location: /admin/dashboard') : header('Location: /dashboard'); die;
         }
 
         if(!empty($_POST)) {
