@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.8] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Correction des injections SQL dans les repository (fetchAll au lieu de fetch)
+
 ## [0.2.7] - 2025-10-01
 
 ### 🐛 Bug Fixes
