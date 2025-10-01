@@ -47,6 +47,8 @@ class RegisterController extends AbstractController
                     'id' => $id,
                     'username' => $user['firstname']
                 ];
+                // Correction : Par défaut l'utilisateur n'est pas admin
+                $_SESSION['admin'] = 0;
 
                 // On redirige vers son dashboard
                 header("Location: /user/ticket");
