@@ -15,15 +15,22 @@ class UserRepository extends AbstractRepository
 
     public function find(int $id)
     {
-        $user = $this->getConnection()->query("SELECT * FROM mns_user WHERE id = $id");
-        return EntityMapper::map(User::class, $user);
+        // Correction : Requête préparée pour éviter les injections SQL
+        $sql = "SELECT * FROM mns_user WHERE id = :id";
+        $query = $this->getConnection()->prepare($sql);
+        $query->execute(['id' => $id]);
+        $data = $query->fetch();
+        return $data ? EntityMapper::map(User::class, $data) : null;
     }
 
     public function findByEmail(string $email)
     {
-        $sql = "SELECT * FROM mns_user WHERE email = '$email'";
-        $query = $this->getConnection()->query($sql);
-        return EntityMapper::map(User::class, $query->fetch());
+        // Correction : Requête préparée pour éviter les injections SQL
+        $sql = "SELECT * FROM mns_user WHERE email = :email";
+        $query = $this->getConnection()->prepare($sql);
+        $query->execute(['email' => $email]);
+        $data = $query->fetch();
+        return $data ? EntityMapper::map(User::class, $data): null;
     }
 
     public function insert(array $data = array())
