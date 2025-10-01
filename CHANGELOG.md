@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.16] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Gestion des erreurs de création d'un copte avec un mail déjà existant
+
 ## [0.2.15] - 2025-10-01
 
 ### 🐛 Bug Fixes
