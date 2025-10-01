@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.9] - 2025-10-01
+
+### 🐛 Bug Fixes
+
+- Hash des mots de passes des comptes de demo dans les fichiers database et demo_data
+
 ## [0.2.8] - 2025-10-01
 
 ### 🐛 Bug Fixes
