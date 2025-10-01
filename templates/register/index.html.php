@@ -6,9 +6,14 @@
 
             <h1>Inscription</h1>
 
-            <?php if(isset($error)): ?>
+            <!-- Correction : La page d'inscription reçoit un tableau $errors par une variable $error -->
+            <?php if (!empty($errors)): ?>
                 <div class="alert alert-danger" role="alert">
-                    <?= $error ?>
+                    <ul>
+                        <?php foreach ($errors as $err): ?>
+                            <li><?= htmlspecialchars($err) ?></li>
+                        <?php endforeach; ?>
+                    </ul>
                 </div>
             <?php endif; ?>
 

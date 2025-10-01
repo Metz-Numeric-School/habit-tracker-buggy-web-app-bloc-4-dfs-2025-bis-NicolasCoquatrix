@@ -50,11 +50,13 @@ class SecurityController extends AbstractController
                 }
                 else
                 {
-                    $error = 'Invalid username or password';
+                    // Correction : Traduction en français
+                    $error = 'Email ou mot de passe invalide';
                 }
             }
 
-            $error = 'Invalid username or password';
+            // Correction : Traduction en français
+            $error = 'Email ou mot de passe invalide';
         }
 
         return $this->render('security/login.html.php', [
